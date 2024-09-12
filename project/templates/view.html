@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список файлов</title>
+</head>
+<body>
+    <h1>Список файлов</h1>
+    <ul>
+        {% for item in items %}
+            <li>
+                {{ item.name }}      
+                {% if not item.is_dir %}  <!-- проверка: является ли элемент папкой -->
+                    <form action="{% url 'download_file' %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="token" value="{{ token }}">  <!-- поле для токена -->
+                        <input type="hidden" name="file_path" value="{{ item.path }}">  <!-- поле для пути файла -->
+                        <button type="submit">Скачать</button>
+                    </form>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
