@@ -27,11 +27,12 @@ python manage.py runserver
 ## Внешний вид
 
 ### Начальная страница (формы)
-![start_page](/test_task__full-stack-dev/pictures/start.png)
+![start_page](https://github.com/Elzara20/test_task__full-stack-dev/blob/main/pictures/start.png)
+
 Необходимо ввести OAuth-токен для авторизации в Яндексе и публичную ссылку (public_key) на Яндекс.Диск, где будут файлы и папки 
 
 ### Список файлов
-![view_file](/test_task__full-stack-dev/pictures/view_file.png)
+![view_file](https://github.com/Elzara20/test_task__full-stack-dev/blob/main/pictures/view_file.png)
 
 
 После выбора файла и нажатия кнопки "Скачать" на экране выводится сообщение ```файл имя_файла.jpg успешно скачан```
